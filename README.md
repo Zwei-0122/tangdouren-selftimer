@@ -49,7 +49,7 @@ tests/selfServiceCore.test.ts               核心逻辑单元测试
 
 1. 跑 `npm run build`（或 `tsc --noEmit`）确认编译通过；
 2. 浏览器打开 `/self-timer`，选桌位开台，确认能创建会话；
-3. 用 `/self-timer/session/<session_id>` 打开会话页，测试暂停和结束；
+3. 用 `/self-timer/session/<session_id>` 打开会话页，确认时长和实时预估费用正常显示（顾客端无暂停/结束按钮，控制权在店员后台）；再从后台对该会话执行暂停/结束，确认顾客端状态同步；
 4. 后台 `timers` 列表和详情页能看到自助会话（带"自助"来源标签），详情页可修改顾客填错的座位号；
 5. 可选：`npm test` 跑 `tests/selfServiceCore.test.ts`。
 
